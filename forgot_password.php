@@ -25,12 +25,12 @@ if (isset($_POST['submit'])) {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'woomay.sarathee@student.aiu.edu.my'; // Replace with your email
-            $mail->Password = 'urikrwucaccdzxle';  // Replace with your email password
+            $mail->Username = ''; // Replace with your email
+            $mail->Password = '';  // Replace with your email password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
             $mail->Port = 587;
 
-            $mail->setFrom('woomay.sarathee@student.aiu.edu.my', 'Password Reset');
+            $mail->setFrom('email@gmail.com', 'Password Reset');
             $mail->addAddress($email);
 
             $mail->isHTML(true);
